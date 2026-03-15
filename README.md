@@ -1,5 +1,7 @@
 # encode-hanconvert
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 This is the README file for Encode::HanConvert, two encoding formats to facilitate mappings between traditional and simplified Chinese characters.
 
 ## Installation

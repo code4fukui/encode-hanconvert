@@ -1,6 +1,6 @@
 # encode-hanconvert
 
-encode-hanconvertは、従来の中国語と簡体字中国語間の変換を容易にするエンコーディング形式です。
+encode-hanconvertは、中国語の簡体字と繁体字間の変換を行う2つのエンコーディング形式を提供するプロジェクトです。
 
 ## デモ
 [デモページ](https://code4fukui.github.io/encode-hanconvert/)
