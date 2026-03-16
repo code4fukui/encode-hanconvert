@@ -33,10 +33,4 @@ console.log(Big5.encode("元気？"));
 
 ## License
 
-Copyright 2002-2009 by Audrey Tang <cpan@audreyt.org>.  
-Copyright 2006 by Kuang-che Wu <kcwu@csie.org>.  
-
-All rights reserved.  You can redistribute and/or modify
-this bundle under the same terms as Perl itself.
-
-See <http://www.perl.com/perl/misc/Artistic.html>.
+MIT License — see [LICENSE](LICENSE).

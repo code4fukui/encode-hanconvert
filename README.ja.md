@@ -1,9 +1,10 @@
 # encode-hanconvert
 
-encode-hanconvertは、中国語の簡体字と繁体字間の変換を行う2つのエンコーディング形式を提供するプロジェクトです。
+encode-hanconvertは、中国語の簡体字と繁体字の相互変換を行うためのライブラリです。Perlで実装されており、JavaScriptの実装も提供されています。
 
 ## デモ
-[デモページ](https://code4fukui.github.io/encode-hanconvert/)
+encode-hanconvertのデモページ: https://code4fukui.github.io/encode-hanconvert/
+
 ```js
 import { Big5 } from "https://code4fukui.github.io/encode-hanconvert/js/Big5.js";
 
@@ -33,8 +34,4 @@ make install
 コマンドラインツール`b2g.pl`と`g2b.pl`がインストールされ、GBKとBig5エンコーディング間の簡単な変換ができます。
 
 ## ライセンス
-Copyright 2002-2009 by Audrey Tang <cpan@audreyt.org>  
-Copyright 2006 by Kuang-che Wu <kcwu@csie.org>
-
-Perlと同じ条件で再配布および変更が可能です。
-http://www.perl.com/perl/misc/Artistic.html
+MIT License — 詳細は [LICENSE](LICENSE) を参照してください。
