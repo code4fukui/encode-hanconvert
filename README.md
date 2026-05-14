@@ -1,48 +1,60 @@
 # encode-hanconvert
 
-This is the README file for Encode::HanConvert, two encoding
-formats to facilitate mappings between traditional and simplified
-Chinese characters.
+A Perl module and JavaScript library for converting between Traditional and Simplified Chinese characters.
 
-## Installation
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-Encode::HanConvert uses the standard perl module install process:
+## JavaScript Usage
+
+This repository provides a modern JavaScript module for client-side character conversion.
+
+### Live Demo
+
+A simple web interface for real-time character conversion is available:
+
+- **[Live Demo](https://code4fukui.github.io/encode-hanconvert/)**
+
+### Code Example
+
+The ES module can be imported directly from GitHub Pages. The `Big5.encode()` function converts Simplified Chinese (GB2312) characters to their Traditional Chinese (Big5) equivalents.
+
+```js
+import { Big5 } from "https://code4fukui.github.io/encode-hanconvert/js/Big5.js";
+
+// Converts Simplified/Japanese characters to Traditional
+console.log(Big5.encode("元気？")); // Outputs: 元氣？
+console.log(Big5.encode("日本的参与！")); // Outputs: 日本的參與！
+```
+
+## Perl Module (Encode::HanConvert)
+
+This is the original Perl module that provides two encoding formats to facilitate mappings between Traditional and Simplified Chinese via Perl's `Encode` module.
+
+### Requirements
+
+- Perl 5.7.3 or later
+- Encode 1.41 or later
+
+If the requirements are not met, `Encode::HanConvert::Perl` is used as a fallback, providing pure-Perl implementations.
+
+### Installation
+
+`Encode::HanConvert` uses the standard Perl module installation process:
 
 ```sh
 perl Makefile.PL
 make
 make test
 make install
-enc2xs -C	# optional; updates Encode.pm's on-demand loading DB
+enc2xs -C	# Optional: updates Encode.pm's on-demand loading DB
 ```
 
-You will need perl 5.7.3 or better, as well as Encode 1.41 or better
-for Unicode-related functions. Otherwise, Encode::HanConvert::Perl
-is used automatically, which provides perl-based implementations to
-big5_to_gb() and gb_to_big5().
+The module also installs two command-line utilities, `b2g.pl` and `g2b.pl`, for converting files between GBK and Big5 encodings. For detailed usage and examples, please consult the module's POD documentation.
 
-Regardless of the implementation, two command-line utilities ('b2g.pl'
-and 'g2b.pl') are installed for simple conversion between GBK and Big5
-encodings.
+## Acknowledgements
 
-For this module's typical usage and examples, please consult its POD
-documentation.
+This project is a fork of the original [encode-hanconvert](https://github.com/audreyt/encode-hanconvert) by Audrey Tang, with an added JavaScript implementation and live demo.
 
-## in JavaScript
+## License
 
-- [Live Demo](https://code4fukui.github.io/encode-hanconvert/)
-```js
-import { Big5 } from "https://code4fukui.github.io/encode-hanconvert/js/Big5.js";
-
-console.log(Big5.encode("元気？"));
-```
-
-## Copyright
-
-Copyright 2002-2009 by Audrey Tang <cpan@audreyt.org>.  
-Copyright 2006 by Kuang-che Wu <kcwu@csie.org>.  
-
-All rights reserved.  You can redistribute and/or modify
-this bundle under the same terms as Perl itself.
-
-See <http://www.perl.com/perl/misc/Artistic.html>.  
+MIT License — see [LICENSE](LICENSE).
